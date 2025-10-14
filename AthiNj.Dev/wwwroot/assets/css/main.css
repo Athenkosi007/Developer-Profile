@@ -61,9 +61,11 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+    margin-bottom: 0;
+    padding: 0;
 }
 
 a {
@@ -209,7 +211,8 @@ h6 {
 
   .header~main,
   .header~#footer {
-    margin-left: 300px;
+    margin-left: 285px;
+    margin-right: 0px;
   }
 }
 
@@ -365,12 +368,13 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  padding: 40px 0;
-  position: relative;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-size: 14px;
+    padding: 35px 0;
+    position: relative;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    margin-bottom: 0;
 }
 
 .footer .copyright p {
@@ -381,7 +385,9 @@ h6 {
   margin-top: 4px;
   font-size: 13px;
   text-align: center;
+  margin-bottom: 0;
 }
+    
 
 /*--------------------------------------------------------------
 # Preloader
@@ -564,7 +570,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: color-mix(in srgb, var(--background-color), transparent 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -717,6 +723,29 @@ section,
   transition: 0.9s;
   background-color: var(--accent-color);
 }
+
+/* Remove progress bar styling */
+.skills .progress,
+.skills .progress .skill,
+.skills .progress-bar-wrap,
+.skills .progress-bar {
+    display: none; /* hide old progress bars */
+}
+
+/* New icon-based skills */
+.skill-icon {
+    font-size: 50px; /* size of each icon */
+    color: var(--accent-color); /* theme color */
+    margin: 15px; /* spacing */
+    transition: transform 0.3s, color 0.3s;
+    cursor: default;
+}
+
+    .skill-icon:hover {
+        transform: scale(1.2); /* hover effect */
+        color: var(--heading-color); /* change color on hover */
+    }
+
 
 /*--------------------------------------------------------------
 # Resume Section
