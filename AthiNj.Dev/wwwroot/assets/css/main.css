@@ -747,6 +747,46 @@ section,
     }
 
 
+.skills-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    gap: 0;
+    width: 100%;
+    align-content:center;
+}
+
+
+
+    .skill-card:hover {
+        transform: translateY(-5px);
+    }
+
+.skill-icon {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;    
+    cursor: pointer;
+}
+
+    .skill-icon:hover::after {
+        content: attr(title);
+        display: block;
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 0.5rem;
+    }
+.skill-label {
+    white-space: normal;
+    word-break: break-word;
+}
+
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
